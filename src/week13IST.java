@@ -94,13 +94,31 @@ public class week13IST {
     public static void unitsAndGrades(){
 
         Scanner input = new Scanner(System.in);
+        int total = 0;
 
         String[] units;
-        units = new String[] {"CF","DaD","PoP","N&CS","SAD","APP"};
+        units = new String[] {"CF","DaD","PoP","N&CS","BSAD","APP"};
 
         int[] grades;
+        grades = new int[6];
 
-        System.out.println("this is annoying");
+        for(int count = 0; count <grades.length; count++){
+            System.out.println("Please enter the grade obtained for " + units[count]);
+            grades[count] = input.nextInt();
+
+        }
+
+        System.out.println("Units and Grades are");
+
+        for(int count = 0; count < grades.length; count++){
+            System.out.println(units[count] + ": " + grades[count]);
+            total = total + grades[count];
+        }
+
+        int average = total/6;
+        System.out.println("Average: " + average);
+
+
 
 
 
